@@ -29,10 +29,8 @@ function startGame() {
 
 function pick(event ){
     
-    console.log("eloo");
     const { row, column} = event.target.dataset;
     const turn = round % 2 === 0 ? player1 : player2;
-    console.log(turnField.innerHTML, "PLay")
     if ( round % 2 === 0 ) {
      turnField.innerText = "PLAYER 1" }
      
@@ -44,12 +42,8 @@ function pick(event ){
     if (gameBoard[row][column] !== "") return;
     event.target.classList.add(turn);
     round++;
-    console.log(round);
     gameBoard[row][column] = turn;
-    console.log(gameBoard);
-
-    console.log(winStatus());  
-    
+        
 }
 
 function winStatus() {
@@ -81,11 +75,9 @@ const button = document.querySelector(".resetButton");
 button.addEventListener("click", reset);
 
 function reset(){
-    console.log("reset");
     boxes.forEach (box => box.classList.remove(player1, player2));
     gameBoard = [["","",""],["","",""],["","",""]];
     startGame();
-    console.log(gameBoard);
     round++
     
 }
