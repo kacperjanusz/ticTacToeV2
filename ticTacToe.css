@@ -1,0 +1,41 @@
+body {font-family: sans-serif;}
+.turnBox {
+    width: 300px;
+    height: 50px;
+    border: 1px solid black;
+    font-size: 40px;
+    align-items: center;
+}
+.gameBoard {
+    width: 300px;
+    background-color: rgb(80, 88, 88);
+    grid-template-columns: repeat(3, 0fr);
+    grid-template-rows: repeat(3, 100px);
+    grid-gap: 3px;
+    display: grid;
+    border: 1px solid black;
+    cursor: pointer;
+
+}
+.box {
+    width: 98px;
+    background-color: rgba(179, 217, 235, 0.938);
+    background: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+    color: black;
+}
+.box:hover {
+    cursor: pointer; /* Nowe */
+    background-color: rgba(45, 24, 163, 0.175);
+}
+.resetButton {
+    width: fit-content;
+    height: fit-content;
+    border: 1px solid black;
+}
+.resetButton:hover {
+    cursor: pointer;
+    background-color: rgba(114, 11, 11, 0.175);
+}
